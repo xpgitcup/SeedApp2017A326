@@ -1785,13 +1785,20 @@
 }
 .pagination {
   zoom: 1;
+  border-top: 1px solid; /*20170212 add by lixiaoping*/
+  border-top-color: inherit; /*20170212 add by lixiaoping*/
 }
 .pagination table {
   float: left;
   height: 30px;
+  width: auto; /*20170212 add by lixiaoping*/
+  margin-bottom: 0px; /*20170212 add by lixiaoping*/
 }
 .pagination td {
   border: 0;
+  padding-top: 0px; /*20170212 add by lixiaoping*/
+  padding-bottom: 0px; /*20170212 add by lixiaoping*/
+  vertical-align: middle; /*20170212 add by lixiaoping*/
 }
 .pagination-btn-separator {
   float: left;
@@ -1817,15 +1824,12 @@
   border-style: solid;
 }
 .pagination-info {
-  display: none;  //2017.02.08 by 李晓平
-  /*
   float: right;
   margin: 0 6px 0 0;
   padding: 0;
   height: 30px;
   line-height: 30px;
   font-size: 12px;
-  */
 }
 .pagination span {
   font-size: 12px;
