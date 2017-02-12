@@ -20,7 +20,7 @@
             </g:if>
             <f:table collection="${dataKeyList}" />
 
-            <div class="pagination">
+            <div class="paginationGrails">
                 <g:paginate total="${dataKeyCount ?: 0}" />
             </div>
         </div>

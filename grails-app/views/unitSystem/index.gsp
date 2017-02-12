@@ -20,7 +20,7 @@
             </g:if>
             <f:table collection="${unitSystemList}" />
 
-            <div class="pagination">
+            <div class="paginationGrails">
                 <g:paginate total="${unitSystemCount ?: 0}" />
             </div>
         </div>

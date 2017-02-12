@@ -20,7 +20,7 @@
             </g:if>
             <f:table collection="${systemChatList}" />
 
-            <div class="pagination">
+            <div class="paginationGrails">
                 <g:paginate total="${systemChatCount ?: 0}" />
             </div>
         </div>

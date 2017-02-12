@@ -20,7 +20,7 @@
             </g:if>
             <f:table collection="${systemDefaultMenuList}" />
 
-            <div class="pagination">
+            <div class="paginationGrails">
                 <g:paginate total="${systemDefaultMenuCount ?: 0}" />
             </div>
         </div>

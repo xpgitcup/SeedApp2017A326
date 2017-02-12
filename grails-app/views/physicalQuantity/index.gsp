@@ -20,7 +20,7 @@
             </g:if>
             <f:table collection="${physicalQuantityList}" />
 
-            <div class="pagination">
+            <div class="paginationGrails">
                 <g:paginate total="${physicalQuantityCount ?: 0}" />
             </div>
         </div>
