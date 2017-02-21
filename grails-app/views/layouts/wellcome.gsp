@@ -23,7 +23,7 @@
     <asset:stylesheet src="easyui/themes/default/easyui.css"/>
     <asset:stylesheet src="easyui/themes/icon.css"/>
 
-    <asset:stylesheet src="cup/cup.css"/>
+    <asset:stylesheet src="user/cup.css"/>
 
     <g:layoutHead/>
 
@@ -63,6 +63,6 @@
     </div>
 </div>
 
-<asset:javascript src="application.js"/>
+<!--asset:javascript src="application.js"/-->
 </body>
 </html>
