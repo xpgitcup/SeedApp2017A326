@@ -37,8 +37,6 @@
     <!--用户自定义的-->
     <asset:javascript src="user/common/common.js"/>
 
-    <asset:javascript src="user/system/loadMenu.js"/>
-
     <g:layoutHead/>
 </head>
 

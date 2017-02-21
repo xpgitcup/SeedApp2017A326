@@ -449,7 +449,7 @@ th:hover, tr:hover {
     background: #79b94c;
 }
 
-/* PAGINATION  改名，增加了Grails，以避免与EasyUI中相冲突*/
+/* PAGINATION */
 
 .paginationGrails {
     border-top: 0;
