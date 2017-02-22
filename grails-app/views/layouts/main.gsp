@@ -42,22 +42,27 @@
 
 <body>
 
+<!--这事页眉部分-->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <!-->
             <span class="applicationTitle">
                 <a class="navbar-brand" href="http://www.cup.edu.cn">
+                    <!--这是程序的图标-->
                     <i class="fa grails-icon">
                         <!--asset:image src="grails-cupsonly-logo-white.svg"/-->
                         <asset:image src="cup/${cn.edu.cup.system.SystemTitle.last()?.applicationLogo}"/>
                     </i> <!--Grails-->
                 </a>
+                <!--这是程序的标题-->
                 <label>
                     ${cn.edu.cup.system.SystemTitle.last()?.applicationTitle}
                 </label>
             </span>
         </div>
 
+        <!--这是页眉右边的用户信息显示，以及登录、退出按钮 -->
         <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
             <ul class="nav navbar-nav navbar-right">
             <!--g:pageProperty name="page.nav" /-->
@@ -77,12 +82,14 @@
     </div>
 </div>
 
+<!--这是Home按钮-->
 <div class="btn-group">
     <button type="button" class="btn btn-default">
         <a class="homeBtn" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a>
     </button>
 </div>
 
+<!--这里显示保存在会话中的各个菜单-->
 <g:each in="${session.menuItems}" status="i" var="menuItem">
     <div class="btn-group">
         <button type="button" class="btn btn-default">${menuItem.menuContext}</button>
@@ -98,42 +105,17 @@
     </div>
 </g:each>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-default">
-        测试BootStrapTree
-    </button>
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-        <span class="sr-only">切换下拉菜单</span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-        <div id="mainMenuTreeDiv"></div>
-    </ul>
-</div>
-
-<div class="btn-group">
-    <button type="button" class="btn btn-default">
-        测试EasyUI
-    </button>
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-        <span class="sr-only">切换下拉菜单</span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-        <div id="mainMenuTreeDivA">
-            <ul id="" class="easyui-tree" url="/home/getMainMenuTreeStringA"></ul>
-        </div>
-    </ul>
-</div>
-
+<!--这是菜单区域与主显示区宇之间的一条分割线-->
 <hr style="color: green; height: 2px">
 
+<!--这是主显示区域，各个菜单所对应的内容将显示在这里-->
 <div class="panel panel-primary">
     <div class="panel-body">
         <g:layoutBody/>
     </div>
 </div>
 
+<!-- 这是页脚信息显示 -->
 <div id="footer">
     <ul class="nav navbar-right">
         <li>
