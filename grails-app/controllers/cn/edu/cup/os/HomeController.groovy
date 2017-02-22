@@ -11,7 +11,7 @@ class HomeController {
 
     }
 
-    private void initSystemMenuItems() {
+    private void listSystemMenu() {
         //根据用户的属性，设置菜单
         params.user = session.user
         def menuItems = systemCommonService.getAllTopLevelMenus(params)
@@ -57,7 +57,7 @@ class HomeController {
         if (user) {
             session.user = user
             //初始化用户菜单
-            initSystemMenuItems()
+            listSystemMenu()
             //在会话中登记用户
             registeUserInSession(user)
             systemLogService.recordLog(session, request, params)
