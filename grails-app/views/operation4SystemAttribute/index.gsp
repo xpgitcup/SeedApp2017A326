@@ -8,6 +8,8 @@
 
 <html>
     <head>
+        <meta name="layout" content="main" />
+        <g:set var="entityName" value="SystemAttribute" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sample title</title>
     </head>

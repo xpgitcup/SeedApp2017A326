@@ -126,7 +126,7 @@
     </ul>
 </div>
 
-<div style="height: 1px"></div>
+<hr style="color: green; height: 2px">
 
 <div class="panel panel-primary">
     <div class="panel-body">
