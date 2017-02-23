@@ -320,13 +320,13 @@ class InitService {
             def attributeA = new SystemAttribute(name: "系统操作权限")
             attributeA.save(true)
             for (int i = 0; i < 10; i++) {
-                def aa = new SystemAttribute(name: "权限${i}", upAttribute: attributeA)
+                def aa = new SystemAttribute(name: "权限${i}", upAttribute: null)
                 aa.save(true)
             }
             def attributeB = new SystemAttribute(name: "读取权限")
             attributeB.save(true)
             for (int i = 0; i < 10; i++) {
-                def aa = new SystemAttribute(name: "读取权限${i}", upAttribute: attributeB)
+                def aa = new SystemAttribute(name: "读取权限${i}", upAttribute: null)
                 aa.save(true)
             }
         }

@@ -10,6 +10,15 @@ class Operation4SystemAttributeController extends SystemAttributeController{
     def treeViewService
 
     /*
+    * 统计根属性
+    * */
+    def countSystemAttribute() {
+        def result = SystemAttribute.countByUpAttributeIsNull()
+        println("统计结果：${result}")
+        return result
+    }
+
+    /*
     * 获取当前id对应的对象
     * */
     def getSystemAttribute(SystemAttribute systemAttribute) {
