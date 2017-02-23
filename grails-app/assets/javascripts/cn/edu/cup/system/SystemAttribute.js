@@ -45,12 +45,19 @@ $(function(){
         displayMsg: '',
         layout: ['first', 'prev', 'links', 'next', 'last'],
         onSelectPage:function(pageNumber, pageSize){
-            $(this).pagination('loading');
-            alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
-            $(this).pagination('loaded');
+            displayTreeSystemAttributeDiv.tree({
+                url: "getTreeSystemAttribute" + getParams(pageNumber, pageSize)
+            })
+            //$(this).pagination('loading');
+            //alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
+            //$(this).pagination('loaded');
         }
     });
 });
+
+/*
+* 获取数据
+* */
 
 /*
 * 统计记录总数

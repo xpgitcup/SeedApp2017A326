@@ -38,9 +38,12 @@ function ajaxCalculate(url) {
     $.ajax({
         type: 'POST',
         url: url,
+        async: false,
         success: function (data, textStatus) {
-            console.info("计算结果：" + data);
-            result = data;
+            console.info("ajax状态：" + textStatus);
+            console.info("ajax结果：" + data);
+            console.info("ajax结果：" + data.count);
+            result = parseInt(data.count);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.info(XMLHttpRequest);
@@ -48,6 +51,7 @@ function ajaxCalculate(url) {
             console.info(errorThrown);
         }
     });
+    console.info("返回的结果：" + result);
     return result;
 }
 

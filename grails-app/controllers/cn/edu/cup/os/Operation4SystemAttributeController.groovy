@@ -13,9 +13,15 @@ class Operation4SystemAttributeController extends SystemAttributeController{
     * 统计根属性
     * */
     def countSystemAttribute() {
-        def result = SystemAttribute.countByUpAttributeIsNull()
-        println("统计结果：${result}")
-        return result
+        def count = SystemAttribute.countByUpAttributeIsNull()
+        println("统计结果：${count}")
+        def result = [count: count]
+        if (request.xhr) {
+            render result as JSON
+        } else {
+            result
+        }
+        //return count //就是不行
     }
 
     /*
