@@ -35,7 +35,7 @@
     <!--引入jqpagination-->
     <!--asset:javascript src="jqpagination/jquery.jqpagination.min.js"/-->
     <!--用户自定义的-->
-    <asset:javascript src="user/common/common.js"/>
+    <asset:javascript src="cn/edu/cup/common/common.js"/>
 
     <g:layoutHead/>
 </head>

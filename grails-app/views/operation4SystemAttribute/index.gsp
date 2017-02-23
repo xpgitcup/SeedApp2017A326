@@ -12,7 +12,7 @@
     <g:set var="entityName" value="SystemAttribute"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>${entityName}维护</title>
-    <asset:javascript src="user/system/${entityName}.js"/>
+    <asset:javascript src="cn/edu/cup/system/${entityName}.js"/>
 </head>
 
 <body>
@@ -30,8 +30,9 @@
                     </ul>
                 </div>
 
-                <div class="panel-body">
-                    <div id="systemAttributeListDiv"></div>
+                <div class="easyui-panel">
+                    <div id="displayTreeSystemAttributeDiv" class="easyui-tree"></div>
+                    <div id="paginationSystemAttributeDiv" class="easyui-pagination"></div>
                 </div>
             </div>
         </div>
@@ -40,13 +41,13 @@
             <div class="panel panel-default">
                 <div class="nav" role="navigation">
                     <ul>
-                        <li><a class="create" href="javascript: createAttributeItem(0)">新建根节点</a></li>
-                        <li><a id="createLeafAttribute" class="create" href="#">新建子节点</a></li>
+                        <li><a class="create" href="javascript: createSystemAttribute(0)">新建根节点</a></li>
+                        <li><a id="createSystemAttribute" class="create" href="#">新建子节点</a></li>
                     </ul>
                 </div>
 
-                <div class="panel-body">
-                    <div id="systemAttributeEditDiv"></div>
+                <div class="easyui-panel">
+                    <div id="showSystemAttributeDiv"></div>
                 </div>
             </div>
         </div>

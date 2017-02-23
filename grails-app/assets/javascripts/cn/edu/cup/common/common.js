@@ -2,6 +2,19 @@
  * Created by LiXiaoping on 2017/1/12.
  */
 
+var pageSize = 10
+
+/*
+* Cookie读取，如果有，就读取；如果没有，赋值为1
+* */
+function readCookie(cName, defaultValue) {
+    var result = $.cookie(cName);
+    if (!result) {
+        result = defaultValue;
+    }
+    return result
+}
+
 /*
  * 分页计算函数
  * */
