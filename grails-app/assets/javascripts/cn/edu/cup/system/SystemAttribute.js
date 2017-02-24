@@ -44,20 +44,30 @@ $(function(){
         showPageList: true,
         displayMsg: '',
         layout: ['first', 'prev', 'links', 'next', 'last'],
+        //翻页函数
         onSelectPage:function(pageNumber, pageSize){
             displayTreeSystemAttributeDiv.tree({
                 url: "getTreeSystemAttribute" + getParams(pageNumber, pageSize)
             })
-            //$(this).pagination('loading');
-            //alert('pageNumber:'+pageNumber+',pageSize:'+pageSize);
-            //$(this).pagination('loaded');
         }
     });
 });
 
 /*
-* 获取数据
+* 新建
 * */
+function createSystemAttribute(id) {
+    console.info("创建SystemAttribute. 上级节点：" + id);
+    ajaxRun("createSystemAttribute", id, "showSystemAttributeDiv");
+}
+
+/*
+* 编辑
+* */
+function editSystemAttribute(id) {
+    console.info("编辑SystemAttribute." + id);
+    ajaxRun("editSystemAttribute", id, "showSystemAttributeDiv");
+}
 
 /*
 * 统计记录总数

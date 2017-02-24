@@ -4,10 +4,45 @@ import cn.edu.cup.dictionary.JsFrame
 import cn.edu.cup.system.SystemAttribute
 import cn.edu.cup.system.SystemAttributeController
 import grails.converters.JSON
+import grails.transaction.Transactional
 
+@Transactional(readOnly = true)
 class Operation4SystemAttributeController extends SystemAttributeController{
 
     def treeViewService
+
+    /*
+    * 创建对象
+    * */
+    def createSystemAttribute(SystemAttribute systemAttribute) {
+        def newSystemAttribute = new SystemAttribute(upAttribute: systemAttribute)
+        if (request.xhr) {
+            render(template: 'editSystemAttribute', model: [systemAttribute: newSystemAttribute])
+        } else {
+            respond newSystemAttribute
+        }
+    }
+
+    /*
+    * 保存对象
+    * */
+    @Transactional
+    def updateSystemAttribute(SystemAttribute systemAttribute) {
+        println("准备更新：${systemAttribute}")
+        systemAttribute.save flush:true
+        redirect(action: 'index')
+    }
+
+    /*
+    * 编辑对象
+    * */
+    def editSystemAttribute(SystemAttribute systemAttribute) {
+        if (request.xhr) {
+            render(template: 'editSystemAttribute', model: [systemAttribute: systemAttribute])
+        } else {
+            respond systemAttribute
+        }
+    }
 
     /*
     * 统计根属性
